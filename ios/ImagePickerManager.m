@@ -149,6 +149,8 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
     }
     else { // RNImagePickerTargetLibrarySingleImage
         self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        self.picker.navigationBar.translucent = NO;
+        self.picker.navigationBar.barStyle = UIBarStyleBlack;
     }
 
     if ([[self.options objectForKey:@"mediaType"] isEqualToString:@"video"]
